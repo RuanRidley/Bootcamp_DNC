@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500&display=swap');
+
+:root{
+    --azul-dnc: #0c70f2;
+    --preto-dnc: #303030;
+    --cinza-hover: #c9c9c9;
+    --fonte-padrao: 'inter';
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+body{
+    margin: 0;
+    padding: 0%;
+    background: linear-gradient(180deg, rgba(12, 112, 242, 0.5) 19.95%, rgba(12, 112, 242, 0) 24.84%),#303030;
+    background-repeat: no-repeat;
+}
+
+/*Menu de navegação*/
+
+#Principal{
+    width: 100%;
+    height: 100px;
+    border: 1px solid #bababa;
+    background-color: var(--preto-dnc);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#Menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 45%;
+    margin-left: 5%;
+}
+#Principal div a{
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    font-family: var(--fonte-padrao);
+}
+#Principal div a:hover{
+    color: var(--cinza-hover);
+
+}
+#Principal button{
+    cursor: pointer;
+    margin-right: 5%;
+    background-color: var(--azul-dnc);
+    border: 0px;
+    height: 40px;
+    width: 80px;
+    font-family: var(--fonte-padrao);
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    box-shadow: 3px 2px 4px rgba(12, 112, 242, 0.25);
+}
+
+/*seção principal do cabeçalho*/
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+header{
+    color: white;
+    font-family: var(--fonte-padrao);
+}
+header h1{
+    font-size: 70px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    text-align: center;
+}
+header h2{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 80px;
+}
+header .invert{
+    background-color: black;
+    font-weight: bold;
+    padding: 5px;
+}
+
+/*Formulário*/
+
+form{
+    color: white;
+    font-size: var(--fonte-padrao);
+    font-size: 30px;
+    font-weight: 500;
+    width: 550px;
+}
+.form_Group{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+form input{
+    border-radius: 10px;
+    border: 0px;
+    height: 40px;
+    font-size: 17px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+form label{
+    margin-bottom: 3px;
+}
+form input::placeholder{
+     color: rgba(57, 57, 57, 0.5);;
+}
+.checkbox_itens label{
+    font-size: 25px;
+}
+.checkbox_itens{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+input[type="checkbox"]{
+    transform: scale(1.6);
+}
+input[type="submit"]{
+    background-color: rgba(12, 112, 242, 0.9);
+    width: 100%;
+    height: 56px;
+    font-size: 30px;
+    color: white;
+    margin-top: 50px;
+    box-shadow: 0px 6px 4px rgba(12, 112, 242, 0.25);
+    cursor: pointer;
+}
+/*Footer*/
+
+footer{
+    width: 100%;
+    background-color: rgb(12, 112, 242,1);
+}
+footer nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    height: 250px;
+}
+footer .links_nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer h5{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: var(--fonte-padrao);
+    background-color: var(--preto-dnc);
+    border-radius: 5px;
+    padding: 8px 8px 8px 8px;
+}
+footer ul li{
+    text-align: center;
+    color: white;
+    font-weight:500;
+    font-size: 20px;
+    font-family: var(--fonte-padrao);
+    margin: 15px 0px 15px 0px;
+}
+footer ul li a{
+    color: white;
+    text-decoration: none;
+}
+footer ul li a:hover{
+    color: var(--cinza-hover);
+}
+footer .endereço{
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: var(--fonte-padrao);
+    width: 26%;
+}
+/*Footer Termo e Política de uso*/
+footer .Termos{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+footer .Termos a{
+    font-size: 16px;
+    font-family: var(--fonte-padrao);
+    font-weight: 500;
+    color: white;
+    padding: 5px;
+}
+footer .Termos a:first-child{
+    border-right: 2px solid white;
+}    
+footer .Termos a:hover{
+    color: var(--cinza-hover);
+}
+/*tela de até 600px*/
+@media only screen and (max-width: 600px){
+    /*Menu*/
+    #Principal{
+        flex-direction: column;
+        height: auto;
+    }
+    #Menu{
+        flex-direction: column;
+        width: 100%;
+        margin: 0px;
+    }
+    #Menu a{
+        height: 45px;
+    }
+    #Principal button{
+        width: 100%;
+        margin: 0px;
+    }
+    /*Section*/
+    section h1{
+        font-size: 35px;
+    }
+    section h2{
+        font-size: 25px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    form{
+        width: 90%;
+        font-size: 20px;
+    }
+    .checkbox_itens label{
+        font-size: 15px;
+    }
+    /*Ajustando footer*/
+    footer .links_nav{
+        flex-direction: column;
+    }
+    footer .endereço{
+        width: 95%;
+        margin-bottom: 20px;
+    }
+}
